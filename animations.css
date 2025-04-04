@@ -1,0 +1,15 @@
+/* src/animations.css */
+
+/* 初期状態（透明 + 下に少し移動） */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  /* 表示領域に入ったら、ふわっと表示 */
+  .fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+  

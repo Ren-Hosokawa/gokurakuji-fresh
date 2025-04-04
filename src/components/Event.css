@@ -1,0 +1,19 @@
+.events-page {
+    width: 70%;
+    margin: 0 auto;
+    padding: 100px 20px 20px 20px;
+    background-color: #F8F8F8;
+    color: #4a4a4a;
+    font-family: "MS 明朝", serif;
+    text-align: center;
+  }
+  
+  .events-page h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .events-page p {
+    font-size: 1.2rem;
+  }
+  

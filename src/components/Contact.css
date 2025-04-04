@@ -1,0 +1,92 @@
+/* src/components/Contact.css */
+
+/* 全体のコンテナ */
+.contact-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #f8f8f8;
+  font-family: "MS 明朝", serif;
+  color: #4a4a4a;
+
+  /* 万が一グローバルで text-align:center が設定されていたら上書き */
+  text-align: left !important;
+}
+
+
+/* 下線 */
+.section-divider {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 30px;
+}
+
+/* フォーム全体 */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* form-groupがまとまり */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ラベル */
+.form-group label {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  line-height: 1.4;
+}
+
+/* テキストボックスを大きく */
+.contact-form input,
+.contact-form textarea {
+  width: 100% !important;
+  padding: 14px !important;
+  font-size: 1.3rem !important;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 3px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+/* 必須 */
+.required {
+  color: red !important;
+  font-size: 1rem !important;
+  margin-left: 5px !important;
+}
+
+/* エラー表示 */
+.error-message {
+  color: red;
+  margin-bottom: 1rem;
+}
+
+/* 注意文 */
+.required-note {
+  margin: 15px 0;
+  font-size: 1.1rem;
+}
+
+/* ボタン */
+.submit-button {
+  background-color: #4a4a4a;
+  color: white;
+  font-size: 1.2rem;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: flex-start;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #333;
+}

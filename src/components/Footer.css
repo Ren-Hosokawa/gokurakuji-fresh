@@ -1,0 +1,96 @@
+.footer {
+  background-color: #F4F7F9;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ページリンク（デフォルト：PC向け） */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-links li {
+  margin: 0 5px;
+}
+
+
+/* ボタン風リンクスタイル */
+.footer-links a {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #4a4a4a;
+  background-color: #F4F7F9;
+  border: 1px solid #F4F7F9;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* ホバー・フォーカス時の色変化 */
+.footer-links a:hover,
+.footer-links a:focus {
+  background-color: #ddd;
+  color: #333;
+}
+
+/* クリック時の挙動 */
+.footer-links a:active {
+  background-color: #ccc;
+  color: #333;
+}
+
+/* 既訪問時もスタイル変更しない */
+.footer-links a:visited {
+  color: #4a4a4a;
+  background-color: #F4F7F9;
+}
+
+/* インスタグラムアイコン */
+.footer-social a {
+  display: inline-block;
+}
+
+.footer-social img {
+  width: 32px;
+  height: 32px;
+}
+
+/* 権利表記 */
+.footer-rights {
+  font-size: 0.9rem;
+  color: #4a4a4a;
+  margin: 0;
+}
+
+/* スマホ向けレスポンシブ調整 */
+@media (max-width: 768px) {
+  .footer-links {
+    flex-direction: column;
+  }
+  /* 区切り「|」を非表示に */
+  .footer-links li:not(:last-child)::after {
+    content: "";
+  }
+  /* テキストの色合いを薄めに */
+  .footer-links a,
+  .footer-links a:visited {
+    color: #7a7a7a;
+  }
+}
+

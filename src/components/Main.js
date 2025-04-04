@@ -3,9 +3,9 @@ import './Main.css';
 
 // スライドショー用の画像パス（public/images/ フォルダに配置）
 const slideshowImages = [
-  "images/slideshow1.jpeg",
-  "images/slideshow2.jpeg",
-  "images/slideshow3.jpeg"
+  process.env.PUBLIC_URL + "/images/slideshow1.jpeg",
+  process.env.PUBLIC_URL + "/images/slideshow2.jpeg",
+  process.env.PUBLIC_URL + "/images/slideshow3.jpeg"
 ];
 
 // クリック可能なグリッドの各項目
@@ -13,25 +13,25 @@ const clickableItems = [
   {
     id: 1,
     title: "極楽寺について",
-    image: "/images/temple.jpeg",
+    image: process.env.PUBLIC_URL + "/images/temple.jpeg",
     link: "#about"
   },
   {
     id: 2,
     title: "供養・ご祈祷",
-    image: "/images/pray.jpeg",
+    image: process.env.PUBLIC_URL + "/images/pray.jpeg",
     link: "#prayers"
   },
   {
     id: 3,
     title: "お墓",
-    image: "/images/tombs_crystal.jpeg",
+    image: process.env.PUBLIC_URL + "/images/tombs_crystal.jpeg",
     link: "#tombs"
   },
   {
     id: 4,
     title: "お問い合わせ",
-    image: "/images/mizuko.jpeg",
+    image: process.env.PUBLIC_URL + "/images/mizuko.jpeg",
     link: "#contact"
   }
 ];

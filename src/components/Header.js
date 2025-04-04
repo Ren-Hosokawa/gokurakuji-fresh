@@ -14,7 +14,7 @@ const Header = () => {
       <div className="header-content">
         {/* ロゴ */}
         <Link to="/" className="logo-link" onClick={closeMenu}>
-          <img src="/images/logo.jpeg" alt="Logo" className="logo" />
+          <img src={process.env.PUBLIC_URL + "/images/logo.jpeg"} alt="Logo" className="logo" />
         </Link>
 
         {/* ハンバーガーボタン (PCでは非表示) */}
@@ -44,3 +44,4 @@ const Header = () => {
 };
 
 export default Header;
+

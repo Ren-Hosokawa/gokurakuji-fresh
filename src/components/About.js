@@ -14,15 +14,12 @@ const ModalImage = ({ src, alt, onClose }) => (
 );
 
 const About = () => {
-  // モーダル用の状態管理
   const [modalImage, setModalImage] = useState(null);
 
-  // 画像クリック時にモーダル開く
   const openModal = (src, alt) => {
     setModalImage({ src, alt });
   };
 
-  // モーダルを閉じる
   const closeModal = () => {
     setModalImage(null);
   };
@@ -32,7 +29,6 @@ const About = () => {
       <h2 className="section-title">極楽寺について</h2>
       <hr className="section-divider" />
 
-      {/* 極楽寺紹介文（旧: 由来） */}
       <section className="about-description">
         <p>
           今は去る事、四百有余年文緑二年 太閤秀吉公、高野山清巌寺落成時、
@@ -53,18 +49,16 @@ const About = () => {
         </p>
       </section>
 
-      {/* 施設紹介 */}
       <section className="facilities-section">
         <h2 className="section-title">施設紹介</h2>
         <hr className="section-divider" />
 
-        {/* 本堂 */}
         <div className="facility-item">
           <img
-            src="/images/about_hondo.jpeg"
+            src={process.env.PUBLIC_URL + "/images/about_hondo.jpeg"}
             alt="本堂"
             className="facility-image zoom-on-hover"
-            onClick={() => openModal("/images/about_hondo.jpeg", "本堂")}
+            onClick={() => openModal(process.env.PUBLIC_URL + "/images/about_hondo.jpeg", "本堂")}
           />
           <div className="facility-description">
             <h3>本堂</h3>
@@ -75,13 +69,12 @@ const About = () => {
           </div>
         </div>
 
-        {/* 大広間 */}
         <div className="facility-item">
           <img
-            src="/images/about_daikouma.jpeg"
+            src={process.env.PUBLIC_URL + "/images/about_daikouma.jpeg"}
             alt="大広間"
             className="facility-image zoom-on-hover"
-            onClick={() => openModal("/images/about_daikouma.jpeg", "大広間")}
+            onClick={() => openModal(process.env.PUBLIC_URL + "/images/about_daikouma.jpeg", "大広間")}
           />
           <div className="facility-description">
             <h3>大広間</h3>
@@ -89,13 +82,12 @@ const About = () => {
           </div>
         </div>
 
-        {/* 鐘楼塔 */}
         <div className="facility-item">
           <img
-            src="/images/about_dummy.jpeg"
+            src={process.env.PUBLIC_URL + "/images/about_dummy.jpeg"}
             alt="鐘楼塔"
             className="facility-image zoom-on-hover"
-            onClick={() => openModal("/images/about_dummy.jpeg", "鐘楼塔")}
+            onClick={() => openModal(process.env.PUBLIC_URL + "/images/about_dummy.jpeg", "鐘楼塔")}
           />
           <div className="facility-description">
             <h3>鐘楼塔</h3>
@@ -103,13 +95,12 @@ const About = () => {
           </div>
         </div>
 
-        {/* 極楽寺霊園 */}
         <div className="facility-item">
           <img
-            src="images/about_dummy.jpeg"
+            src={process.env.PUBLIC_URL + "/images/about_dummy.jpeg"}
             alt="極楽寺霊園"
             className="facility-image zoom-on-hover"
-            onClick={() => openModal("images/about_dummy.jpeg", "極楽寺霊園")}
+            onClick={() => openModal(process.env.PUBLIC_URL + "/images/about_dummy.jpeg", "極楽寺霊園")}
           />
           <div className="facility-description">
             <h3>極楽寺霊園</h3>
@@ -124,12 +115,11 @@ const About = () => {
         </div>
       </section>
 
-      {/* モーダル表示 */}
       {modalImage && (
         <ModalImage
           src={modalImage.src}
           alt={modalImage.alt}
-          onClose={() => setModalImage(null)}
+          onClose={closeModal}
         />
       )}
     </div>
@@ -137,4 +127,3 @@ const About = () => {
 };
 
 export default About;
-

@@ -1,6 +1,6 @@
 // src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // ← ここを変更
 
 import Header from './components/Header';
 import Main from './components/Main';
@@ -14,25 +14,20 @@ import Footer from './components/Footer';
 
 const App = () => {
   return (
-    <Router>
-      <Header /> {/* 全ページ共通ヘッダー */}
+    <Router> {/* HashRouter を使うことで GitHub Pages に対応 */}
+      <Header />
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/about" element={<About />} />
         <Route path="/prayers" element={<Prayers />} />
         <Route path="/tombs" element={<Tombs />} />
         <Route path="/access" element={<Access />} />
-        <Route path="/event" element={<Event />} /> {/* 年中行事 */}
+        <Route path="/event" element={<Event />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      <Footer /> {/* 全ページ共通フッター */}
+      <Footer />
     </Router>
   );
 };
 
 export default App;
-
-
-
-
-

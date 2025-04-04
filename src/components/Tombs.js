@@ -1,7 +1,7 @@
 // src/components/Tombs.js
 import React, { useState } from 'react';
 import './About.css';
-import './ModalImage.css'; // モーダル用CSSを追加
+import './ModalImage.css';
 import FadeInSection from './FadeInSection';
 
 const ModalImage = ({ src, alt, onClose }) => (
@@ -44,10 +44,10 @@ const Tombs = () => {
       {/* 永代納骨供養墓（合祀墓） */}
       <div className="facility-item photo-lower">
         <img
-          src="/images/about_dummy.jpeg"
+          src={process.env.PUBLIC_URL + "/images/about_dummy.jpeg"}
           alt="永代納骨供養墓"
           className="facility-image zoom-on-hover"
-          onClick={() => openModal("/images/about_dummy.jpeg", "永代納骨供養墓")}
+          onClick={() => openModal(process.env.PUBLIC_URL + "/images/about_dummy.jpeg", "永代納骨供養墓")}
         />
         <div className="facility-description">
           <h3>永代納骨供養墓（合祀墓）</h3>
@@ -66,10 +66,10 @@ const Tombs = () => {
       {/* クリスタルガーデン墓地 */}
       <div className="facility-item photo-lower">
         <img
-          src="/images/tombs_crystal.jpeg"
+          src={process.env.PUBLIC_URL + "/images/tombs_crystal.jpeg"}
           alt="クリスタルガーデン墓地"
           className="facility-image zoom-on-hover"
-          onClick={() => openModal("/images/tombs_crystal.jpeg", "クリスタルガーデン墓地")}
+          onClick={() => openModal(process.env.PUBLIC_URL + "/images/tombs_crystal.jpeg", "クリスタルガーデン墓地")}
         />
         <div className="facility-description">
           <h3>クリスタルガーデン墓地</h3>
@@ -88,10 +88,10 @@ const Tombs = () => {
       {/* 樹木葬＜絆＞ */}
       <div className="facility-item">
         <img
-          src="/images/about_dummy.jpeg"
+          src={process.env.PUBLIC_URL + "/images/about_dummy.jpeg"}
           alt="樹木葬＜絆＞"
           className="facility-image zoom-on-hover"
-          onClick={() => openModal("/images/about_dummy.jpeg", "樹木葬＜絆＞")}
+          onClick={() => openModal(process.env.PUBLIC_URL + "/images/about_dummy.jpeg", "樹木葬＜絆＞")}
         />
         <div className="facility-description">
           <h3>樹木葬＜絆＞</h3>
@@ -108,10 +108,10 @@ const Tombs = () => {
       {/* 動物供養塔＜虹＞（合祀墓） */}
       <div className="facility-item">
         <img
-          src="/images/tombs_niji.jpeg"
+          src={process.env.PUBLIC_URL + "/images/tombs_niji.jpeg"}
           alt="動物供養塔＜虹＞"
           className="facility-image zoom-on-hover"
-          onClick={() => openModal("/images/tombs_niji.jpeg", "動物供養塔＜虹＞")}
+          onClick={() => openModal(process.env.PUBLIC_URL + "/images/tombs_niji.jpeg", "動物供養塔＜虹＞")}
         />
         <div className="facility-description">
           <h3>動物供養塔＜虹＞（合祀墓）</h3>
@@ -127,10 +127,10 @@ const Tombs = () => {
       {/* ペットと一緒に入るクリスタル墓 */}
       <div className="facility-item">
         <img
-          src="/images/tombs_animal.jpeg"
+          src={process.env.PUBLIC_URL + "/images/tombs_animal.jpeg"}
           alt="ペットと一緒に入るクリスタル墓"
           className="facility-image zoom-on-hover"
-          onClick={() => openModal("/images/tombs_animal.jpeg", "ペットと一緒に入るクリスタル墓")}
+          onClick={() => openModal(process.env.PUBLIC_URL + "/images/tombs_animal.jpeg", "ペットと一緒に入るクリスタル墓")}
         />
         <div className="facility-description">
           <h3>ペットと一緒に入るクリスタル墓</h3>
@@ -143,7 +143,6 @@ const Tombs = () => {
         </div>
       </div>
 
-      {/* モーダル表示 */}
       {modalImage && (
         <ModalImage src={modalImage.src} alt={modalImage.alt} onClose={closeModal} />
       )}

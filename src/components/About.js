@@ -106,10 +106,10 @@ const About = () => {
         {/* 極楽寺霊園 */}
         <div className="facility-item">
           <img
-            src="/images/about_dummy.jpeg"
+            src="images/about_dummy.jpeg"
             alt="極楽寺霊園"
             className="facility-image zoom-on-hover"
-            onClick={() => openModal("/images/about_dummy.jpeg", "極楽寺霊園")}
+            onClick={() => openModal("images/about_dummy.jpeg", "極楽寺霊園")}
           />
           <div className="facility-description">
             <h3>極楽寺霊園</h3>

@@ -3,9 +3,9 @@ import './Main.css';
 
 // スライドショー用の画像パス（public/images/ フォルダに配置）
 const slideshowImages = [
-  "/images/slideshow1.jpeg",
-  "/images/slideshow2.jpeg",
-  "/images/slideshow3.jpeg"
+  "images/slideshow1.jpeg",
+  "images/slideshow2.jpeg",
+  "images/slideshow3.jpeg"
 ];
 
 // クリック可能なグリッドの各項目

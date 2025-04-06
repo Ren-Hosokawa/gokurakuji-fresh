@@ -1,13 +1,19 @@
-/* src/components/Slideshow.css */
+.slideshow-wrapper {
+  width: 95vw;
+  margin: 0 auto;
+}
+
 .slideshow {
-    width: 100%;
-    max-height: 400px;
-    overflow: hidden;
-  }
-  
-  .slideshow img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
+  width: 100%;
+  overflow: hidden;
+  max-height: 600px; /* ← ここを 600px や 700px に変更！ */
+}
+
+.slideshow-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+

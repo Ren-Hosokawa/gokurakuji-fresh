@@ -1,18 +1,13 @@
-/* src/components/Contact.css */
-
 /* 全体のコンテナ */
 .contact-page {
   max-width: 800px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 120px 20px 40px;
   background-color: #f8f8f8;
   font-family: "MS 明朝", serif;
   color: #4a4a4a;
-
-  /* 万が一グローバルで text-align:center が設定されていたら上書き */
   text-align: left !important;
 }
-
 
 /* 下線 */
 .section-divider {

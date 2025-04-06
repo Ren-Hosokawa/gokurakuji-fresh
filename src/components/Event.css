@@ -1,19 +1,123 @@
-.events-page {
-    width: 70%;
-    margin: 0 auto;
-    padding: 100px 20px 20px 20px;
-    background-color: #F8F8F8;
-    color: #4a4a4a;
-    font-family: "MS 明朝", serif;
-    text-align: center;
+/* === 既存のイベントページスタイル（変更なし） === */
+.event-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 120px 20px 40px;
+  background-color: #f8f8f8;
+  font-family: "MS 明朝", serif;
+  color: #4a4a4a;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.section-divider,
+.event-divider {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  margin: 30px 0;
+}
+
+.event-article {
+  margin-bottom: 40px;
+}
+
+.event-details h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #888;
+}
+
+.event-details h4 {
+  margin: 5px 0 15px;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.event-details p {
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.event-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.event-image {
+  width: 280px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* === モーダル用スタイル === */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 9999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
   }
-  
-  .events-page h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
-  
-  .events-page p {
-    font-size: 1.2rem;
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+  .event-image {
+    width: 100%;
+    height: auto;
   }
-  
+
+  .event-images {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+

@@ -17,7 +17,7 @@ const Footer = () => (
           <Link to="/tombs">お墓</Link>
         </li>
         <li>
-          <Link to="/access">年中行事</Link>
+          <Link to="/access">年中行事／お知らせ</Link>
         </li>
         <li>
           <Link to="/contact">アクセス</Link>

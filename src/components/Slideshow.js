@@ -1,11 +1,12 @@
-// src/components/Slideshow.js
 import React, { useState, useEffect } from 'react';
-// import './Slideshow.css';
+import './Slideshow.css';
 
 const images = [
-  "/images/slideshow1.jpeg",
-  "/images/slideshow2.jpeg",
-  "/images/slideshow3.jpeg"
+  process.env.PUBLIC_URL + "/images/slideshow1.jpeg",
+  process.env.PUBLIC_URL + "/images/slideshow2.jpeg",
+  process.env.PUBLIC_URL + "/images/slideshow3.jpeg",
+  process.env.PUBLIC_URL + "/images/slideshow4.jpeg",
+
 ];
 
 const Slideshow = () => {
@@ -14,17 +15,23 @@ const Slideshow = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex(prev => (prev + 1) % images.length);
-    }, 150000); // 15秒ごとにスライドを切り替え
-
+    }, 15000);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="slideshow">
-      <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
+    <div className="slideshow-section"> {/* ← 修正ここ！ */}
+      <div className="slideshow">
+        <img
+          src={images[currentIndex]}
+          alt={`Slide ${currentIndex + 1}`}
+          className="slideshow-image"
+        />
+      </div>
     </div>
   );
 };
 
 export default Slideshow;
+
 

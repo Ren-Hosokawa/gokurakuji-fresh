@@ -1,9 +1,9 @@
 // src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // ← HashRouter に変更！
 
 import Header from './components/Header';
-import ScrollToTop from './components/ScrollToTop'; // ← 追加
+import ScrollToTop from './components/ScrollToTop';
 import Main from './components/Main';
 import About from './components/About';
 import Prayers from './components/Prayers';
@@ -16,7 +16,7 @@ import Footer from './components/Footer';
 const App = () => {
   return (
     <Router>
-      <ScrollToTop /> {/* ← ここに追加 */}
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />
@@ -33,3 +33,4 @@ const App = () => {
 };
 
 export default App;
+

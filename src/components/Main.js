@@ -8,7 +8,7 @@ import FadeInSection from './FadeInSection';
 const slideshowImages = [
   "/images/slideshow1.jpeg",
   "/images/slideshow2.jpeg",
-  "images/slideshow3.jpeg"
+  "/images/slideshow3.jpeg"
 ];
 
 const clickableItems = [
